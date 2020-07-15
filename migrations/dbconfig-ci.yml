@@ -1,0 +1,5 @@
+ci:
+    dialect: postgres
+    datasource: postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable
+    dir: migrations/sql
+    table: migrations
