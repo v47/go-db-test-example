@@ -11,7 +11,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE TABLE user(
+CREATE TABLE users(
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
     doc_name TEXT NOT NULL,
@@ -19,9 +19,9 @@ CREATE TABLE user(
 );
 
 CREATE TRIGGER user_set_doc_hash
-BEFORE INSERT ON user
+BEFORE INSERT ON users
 FOR EACH ROW
-EXECUTE PROCEDURE _doc_hash());
+EXECUTE PROCEDURE _doc_hash();
 -- +migrate StatementEnd
 
 
