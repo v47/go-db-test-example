@@ -1,4 +1,5 @@
 // +build integration
+
 package upperhash_test
 
 import (
